@@ -32,8 +32,6 @@ UNET_MODELS=(
 )
 
 LORA_MODELS=(
-    "https://huggingface.co/tarn59/pixel_art_style_lora_z_image_turbo/resolve/main/pixel_art_style_z_image_turbo.safetensors"
-    "https://civitai.com/api/download/models/2539829?type=Model&format=SafeTensor"
 )
 
 VAE_MODELS=(
