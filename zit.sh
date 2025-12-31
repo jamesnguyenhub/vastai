@@ -32,7 +32,6 @@ UNET_MODELS=(
 )
 
 LORA_MODELS=(
-    "https://civitai.com/api/download/models/2539829?type=Model&format=SafeTensor"
     "https://huggingface.co/tarn59/pixel_art_style_lora_z_image_turbo/resolve/main/pixel_art_style_z_image_turbo.safetensors"
 )
 
@@ -196,4 +195,6 @@ function provisioning_download() {
 # Allow user to disable provisioning if they started with a script they didn't want
 if [[ ! -f /.noprovisioning ]]; then
     provisioning_start
+
+    wget -qnc --content-disposition --show-progress -e dotbytes="${3:-4M}" -P "${COMFYUI_DIR}/models/loras" "https://civitai.com/api/download/models/2539829?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
 fi
