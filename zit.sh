@@ -33,7 +33,7 @@ UNET_MODELS=(
 
 LORA_MODELS=(
     "https://huggingface.co/tarn59/pixel_art_style_lora_z_image_turbo/resolve/main/pixel_art_style_z_image_turbo.safetensors"
-    "https://civitai.com/api/download/models/2539829?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
+    "https://civitai.com/api/download/models/2539829?type=Model&format=SafeTensor"
 )
 
 VAE_MODELS=(
@@ -196,6 +196,4 @@ function provisioning_download() {
 # Allow user to disable provisioning if they started with a script they didn't want
 if [[ ! -f /.noprovisioning ]]; then
     provisioning_start
-
-    printf "*********HF and CIVIT TOKEN********* %s ()()() %s" "$HF_TOKEN" "$CIVITAI_TOKEN"
 fi
