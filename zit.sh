@@ -33,6 +33,7 @@ UNET_MODELS=(
 
 LORA_MODELS=(
     "https://huggingface.co/tarn59/pixel_art_style_lora_z_image_turbo/resolve/main/pixel_art_style_z_image_turbo.safetensors"
+    "https://civitai.com/api/download/models/2539829?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
 )
 
 VAE_MODELS=(
@@ -196,5 +197,5 @@ function provisioning_download() {
 if [[ ! -f /.noprovisioning ]]; then
     provisioning_start
 
-    wget -qnc --content-disposition --show-progress -e dotbytes="${3:-4M}" -P "${COMFYUI_DIR}/models/loras" "https://civitai.com/api/download/models/2539829?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
+    printf "*********HF and CIVIT TOKEN********* %s ()()() %s" "$HF_TOKEN" "$CIVITAI_TOKEN"
 fi
