@@ -32,7 +32,8 @@ UNET_MODELS=(
 )
 
 LORA_MODELS=(
-    "https://civitai.com/api/download/models/2536249?type=Model&format=SafeTensor"
+    "https://civitai.com/api/download/models/2460257?type=Model&format=SafeTensor"
+    "https://civitai.com/api/download/models/2481839?type=Model&format=SafeTensor"
 )
 
 VAE_MODELS=(
@@ -69,9 +70,6 @@ function provisioning_start() {
     provisioning_get_files \
         "${COMFYUI_DIR}/models/unet" \
         "${UNET_MODELS[@]}"
-    provisioning_get_loras \
-        "${COMFYUI_DIR}/models/loras" \
-        "${LORA_MODELS[@]}"
     provisioning_get_files \
         "${COMFYUI_DIR}/models/controlnet" \
         "${CONTROLNET_MODELS[@]}"
@@ -84,6 +82,9 @@ function provisioning_start() {
     provisioning_get_files \
         "${COMFYUI_DIR}/models/esrgan" \
         "${ESRGAN_MODELS[@]}"
+    provisioning_get_loras \
+        "${COMFYUI_DIR}/models/loras" \
+        "${LORA_MODELS[@]}"
     provisioning_print_end
 }
 
