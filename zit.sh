@@ -69,7 +69,7 @@ function provisioning_start() {
     provisioning_get_files \
         "${COMFYUI_DIR}/models/unet" \
         "${UNET_MODELS[@]}"
-    provisioning_get_files \
+    provisioning_get_loras \
         "${COMFYUI_DIR}/models/loras" \
         "${LORA_MODELS[@]}"
     provisioning_get_files \
@@ -190,6 +190,21 @@ function provisioning_download() {
     else
         wget -qnc --content-disposition --show-progress -e dotbytes="${3:-4M}" -P "$2" "$1"
     fi
+}
+
+function provisioning_get_loras() {
+    if [[ -z $2 ]]; then return 1; fi
+    
+    dir="$1"
+    mkdir -p "$dir"
+    shift
+    arr=("$@")
+    printf "Downloading %s lora(s) to %s...\n" "${#arr[@]}" "$dir"
+    for url in "${arr[@]}"; do
+        printf "Downloading lora: %s\n" "${url}"
+        wget -qnc --content-disposition --show-progress -e dotbytes="${3:-4M}" -P "${dir}" "${url}&token=${CIVITAI_TOKEN}"
+        printf "\n"
+    done
 }
 
 # Allow user to disable provisioning if they started with a script they didn't want
