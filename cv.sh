@@ -32,7 +32,7 @@ UNET_MODELS=(
 )
 
 LORA_MODELS=(
-    "https://civitai.com/api/download/models/2541878?type=Model&format=SafeTensor"
+    "https://civitai.com/api/download/models/2481839?type=Model&format=SafeTensor"
 )
 
 VAE_MODELS=(
