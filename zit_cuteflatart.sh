@@ -18,6 +18,8 @@ PIP_PACKAGES=(
 NODES=(
     #"https://github.com/ltdrdata/ComfyUI-Manager"
     #"https://github.com/cubiq/ComfyUI_essentials"
+    "https://github.com/city96/ComfyUI-GGUF"
+    "https://github.com/ClownsharkBatwing/RES4LYF"
 )
 
 WORKFLOWS=(
@@ -32,11 +34,11 @@ UNET_MODELS=(
 )
 
 LORA_MODELS=(
-    "https://civitai.com/api/download/models/2481839?type=Model&format=SafeTensor"
+    "https://civitai.com/api/download/models/2458825?type=Model&format=SafeTensor"
 )
 
 VAE_MODELS=(
-    "https://huggingface.co/StableDiffusionVN/Flux/resolve/main/Vae/flux_vae.safetensors"
+    "https://huggingface.co/Comfy-Org/z_image_turbo/resolve/main/split_files/vae/ae.safetensors"
 )
 
 ESRGAN_MODELS=(
@@ -51,6 +53,7 @@ TEXT_ENCODER_MODELS=(
 
 DIFFUSION_MODELS=(
     "https://huggingface.co/Comfy-Org/z_image_turbo/resolve/main/split_files/diffusion_models/z_image_turbo_bf16.safetensors"
+    "https://huggingface.co/jayn7/Z-Image-Turbo-GGUF/resolve/main/z_image_turbo-Q8_0.gguf"
 )
 
 ### DO NOT EDIT BELOW HERE UNLESS YOU KNOW WHAT YOU ARE DOING ###
