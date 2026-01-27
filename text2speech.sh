@@ -22,11 +22,9 @@ NODES=(
 )
 
 WORKFLOWS=(
-
 )
 
 CHECKPOINT_MODELS=(
-    
 )
 
 UNET_MODELS=(
@@ -44,7 +42,6 @@ SPEECH_TOKENIZER=(
 )
 
 VAE_MODELS=(
-    "https://huggingface.co/StableDiffusionVN/Flux/resolve/main/Vae/flux_vae.safetensors"
 )
 
 ESRGAN_MODELS=(
@@ -54,11 +51,9 @@ CONTROLNET_MODELS=(
 )
 
 TEXT_ENCODER_MODELS=(
-    "https://huggingface.co/Comfy-Org/z_image_turbo/resolve/main/split_files/text_encoders/qwen_3_4b.safetensors"
 )
 
 DIFFUSION_MODELS=(
-    "https://huggingface.co/Comfy-Org/z_image_turbo/resolve/main/split_files/diffusion_models/z_image_turbo_bf16.safetensors"
 )
 
 ### DO NOT EDIT BELOW HERE UNLESS YOU KNOW WHAT YOU ARE DOING ###
