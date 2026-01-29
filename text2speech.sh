@@ -124,7 +124,7 @@ function provisioning_get_nodes() {
         else
             printf "Downloading node: %s...\n" "${repo}"
             git clone "${repo}" "${path}" --recursive
-            ( cd "$path" && git checkout 5e97d3c )
+            #( cd "$path" && git checkout 5e97d3c )
             if [[ -e $requirements ]]; then
                 pip install --no-cache-dir -r "${requirements}"
             fi
