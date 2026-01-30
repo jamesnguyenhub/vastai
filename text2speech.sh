@@ -34,11 +34,11 @@ LORA_MODELS=(
 )
 
 QWEN_MODELS=(
-    "https://huggingface.co/Qwen/Qwen3-TTS-12Hz-1.7B-CustomVoice/resolve/main/model.safetensors"
+    #"https://huggingface.co/Qwen/Qwen3-TTS-12Hz-1.7B-CustomVoice/resolve/main/model.safetensors"
 )
 
 SPEECH_TOKENIZER=(
-    "https://huggingface.co/Qwen/Qwen3-TTS-12Hz-1.7B-CustomVoice/resolve/main/speech_tokenizer/model.safetensors"
+    #"https://huggingface.co/Qwen/Qwen3-TTS-12Hz-1.7B-CustomVoice/resolve/main/speech_tokenizer/model.safetensors"
 )
 
 VAE_MODELS=(
@@ -124,7 +124,6 @@ function provisioning_get_nodes() {
         else
             printf "Downloading node: %s...\n" "${repo}"
             git clone "${repo}" "${path}" --recursive
-            #( cd "$path" && git checkout 5e97d3c )
             if [[ -e $requirements ]]; then
                 pip install --no-cache-dir -r "${requirements}"
             fi
