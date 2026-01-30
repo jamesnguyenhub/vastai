@@ -18,7 +18,8 @@ PIP_PACKAGES=(
 NODES=(
     #"https://github.com/ltdrdata/ComfyUI-Manager"
     #"https://github.com/cubiq/ComfyUI_essentials"
-    "https://github.com/flybirdxx/ComfyUI-Qwen-TTS"
+    #"https://github.com/flybirdxx/ComfyUI-Qwen-TTS"
+    "https://github.com/DarioFT/ComfyUI-Qwen3-TTS"
 )
 
 WORKFLOWS=(
